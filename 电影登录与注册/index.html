@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫眼电影 - 首页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">猫眼电影</div>
+            <div class="nav-links">
+                <a href="index.html">首页</a>
+                <a href="login.html" id="loginLink">登录</a>
+                <a href="register.html" id="registerLink">注册</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>欢迎来到猫眼电影</h1>
+        <div class="movie-list">
+            <div class="movie-card">热门电影1</div>
+            <div class="movie-card">热门电影2</div>
+            <div class="movie-card">热门电影3</div>
+        </div>
+    </main>
+
+    <script src="utils.js"></script>
+    <script src="auth.js"></script>
+    <script>
+        // 检查登录状态
+        if (isLoggedIn()) {
+            document.getElementById('loginLink').textContent = '退出登录';
+            document.getElementById('loginLink').href = '#';
+            document.getElementById('loginLink').onclick = logout;
+        }
+    </script>
+</body>
+</html>
