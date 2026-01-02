@@ -1,0 +1,89 @@
+# 🎬 在线电影购票网页 (Movie Booking System)
+
+这是一个基于原生 HTML/CSS/JavaScript 开发的简易电影购票前端项目。该项目模拟了从用户登录、浏览电影、查看详情到选座购票的完整流程。
+
+## 📂 项目目录结构
+
+项目的目录结构组织如下：
+
+```text
+plaintext电影购票网页/
+├── css/                     # 样式文件目录
+│   ├── login.css            # 登录/注册页面专属样式
+│   ├── movie.css            # 电影列表页面专属样式
+│   ├── style.css            # 全局及首页/详情页通用样式
+│   └── style(1).css         # 样式备份文件
+├── images/                  # 图片资源目录
+│   ├── background.jpg       # 全局背景图
+│   ├── logo.jpg             # 网站 Logo
+│   ├── 界面装饰.png          # 登录/注册页装饰元素
+│   └── movie1.jpg~movie6.jpg # 电影海报资源
+├── js/                      # 脚本文件目录
+│   ├── auth.js              # 用户认证逻辑 (注册/登录/存储)
+│   ├── utils.js             # 通用工具函数 (弹窗/验证/状态检查)
+│   └── movie.js             # 电影业务逻辑 (列表交互/购票跳转)
+└── 核心页面文件/             # 页面 HTML 源码
+    ├── index.html           # 首页 (展示电影列表与票房榜)
+    ├── login.html           # 用户登录页
+    ├── register.html        # 用户注册页
+    ├── forgot-pwd.html      # 找回密码页 (待开发)
+    ├── 电影页面.html         # 电影详情页 (介绍/演员表)
+    └── 电影购票.html         # 选座购票页
+
+```
+
+## 🚀 功能模块说明
+
+### 1. 用户认证模块 (User Auth)
+
+* **页面**: `login.html`, `register.html`
+* **核心逻辑**:
+* 支持新用户注册，对密码格式进行基础验证（由 `utils.js` 支持）。
+* 用户登录成功后跳转至首页。
+* 包含“忘记密码”入口（`forgot-pwd.html`，目前为预留功能）。
+
+
+* **样式**: 使用 `login.css` 进行独立的布局设计，配合 `界面装饰.png` 提升视觉效果。
+
+### 2. 电影浏览模块 (Movie Browsing)
+
+* **页面**: `index.html` (首页)
+* **核心逻辑**:
+* 展示当前热映的电影列表（海报来源于 `images/` 目录）。
+* 显示实时票房榜单。
+* 点击海报或标题可跳转至详情页。
+
+
+* **样式**: 主要由 `style.css` 控制整体布局。
+
+### 3. 电影详情与购票模块 (Details & Booking)
+
+* **页面**: `电影页面.html`, `电影购票.html`
+* **核心逻辑**:
+* **详情页**: 展示特定电影的海报、演员阵容及剧情简介。
+* **购票页**: 模拟选座功能，实时计算票价。
+* `movie.js` 负责处理点击“购票”按钮后的跳转逻辑及数据传递。
+
+
+## 🛠️ 技术栈
+
+* **HTML5**: 构建页面语义化结构。
+* **CSS3**: 使用 Flexbox/Grid 布局，实现响应式设计与页面美化。
+* **JavaScript (ES6+)**: 处理 DOM 操作、表单验证及简单的本地数据交互。
+
+## 💻 如何运行
+
+1. 克隆或下载本项目到本地。
+2. 无需安装任何依赖或配置服务器。
+3. 直接双击打开 **`核心页面文件/login.html`** 或 **`核心页面文件/index.html`** 即可在浏览器中预览。
+4. *推荐使用 VS Code 的 "Live Server" 插件运行，以获得更好的路径解析体验。*
+
+
+## 🤝 贡献与反馈
+
+如果你发现任何 Bug 或有优化的建议，欢迎修改代码或提交反馈。
+
+---
+
+**Next Step:**
+Would you like me to help you write the code for any specific file (like `utils.js` or `movie.css`) based on this structure?
