@@ -82,8 +82,3 @@ plaintext电影购票网页/
 ## 🤝 贡献与反馈
 
 如果你发现任何 Bug 或有优化的建议，欢迎修改代码或提交反馈。
-
----
-
-**Next Step:**
-Would you like me to help you write the code for any specific file (like `utils.js` or `movie.css`) based on this structure?
